@@ -50,6 +50,19 @@ $(document).ready(function(){
         alert('Produto esgotado');
 
      })
+    
+    $('.nav-modal-open').on('click', function(e){
+         e.preventDefault();
+
+         let elem = $(this).attr('rel')
+
+         $('.modal-body').html($('#'+elem).html())
+         $('.modal-header.h5.modal-title').html($(this).text())
+
+         let myModal = new bootstrap.Modal($('#modelId'))
+
+            myModal.show()
+         })
      
      
      
