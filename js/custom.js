@@ -50,6 +50,14 @@ $(document).ready(function(){
         alert('Produto esgotado');
 
      })
+
+     $('.featured-item:nth(1)')
+         .hide(2000, function(){
+        console.log( $(this).find('h4').text() + ' esgotado')
+     })
+         .show(2000, function(){
+      console.log( $(this).find('h4').text() + ' em estoque')
+   })
      
      
      
