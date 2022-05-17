@@ -741,3 +741,27 @@ a {
 	} 
 
 }
+
+.form {
+	background-color: #9dafff;
+	padding: 3rem;
+}
+
+.form h3, h5 {
+	text-align: center;
+}
+
+.mb-3 {
+	display: inline-flex;
+	width: 100%;
+	justify-content: center;
+	align-items: center;
+}
+
+.mb-3 button {
+	margin-left: 15px;
+}
+
+#e-mail {
+	max-width: 50%;
+}

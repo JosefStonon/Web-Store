@@ -29,10 +29,10 @@
                         <a class="nav-link" href="products.html">Produtos</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">Sobre nós</a>
+                        <a class="nav-link nav-modal-open" href="about.html" rel="sobre">Sobre nós</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contato</a>
+                        <a class="nav-link nav-modal-open" href="contact.html" rel="contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -142,6 +142,25 @@
         </div>
     </div>
     
+     <form action="" class="form">
+
+        <h3>Receba novidades</h3>
+        <h5>Preencha o formulário e receba as melhores ofertas</h5>
+
+
+        <div class="mb-3">
+            <input type="text" name="e-mail" id="e-mail" class="form-control" placeholder="Digite seu e-mail" aria-describedby="helpe-mail">
+        
+            <button type="submit" class="btn btn-primary">Submit</button>
+       
+        </div>
+
+       
+
+       
+        
+    </form>
+    
     <div class="footer">
         <div class="container">
             <div class="row">
@@ -174,6 +193,8 @@
             </div>
         </div>
     </div>
+
+   
     
     <div class="sub-footer">
         <div class="container">
@@ -186,6 +207,45 @@
                 </div>
             </div>
         </div>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary btn-lg" data-bs-toggle="modal" data-bs-target="#modelId">
+          Launch
+        </button>
+        
+        <!-- Modal -->
+        <div class="modal fade" id="modelId" tabindex="-1" role="dialog" aria-labelledby="modelTitleId" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">Modal title</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                    
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                        <button type="button" class="btn btn-primary">Save</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+       <div id="contato" class="visually-hidden">
+
+           <form action="" class="form">
+
+                <div class="mb-3">
+                    <label for="nome" class="form-label"></label>
+                    <input type="text" name="nome" id="nome" class="form-control" placeholder="digite seu nome" aria-describedby="helpId">
+                    <small id="helpnome" class="text-muted">
+                        Digite um nome válido
+                    </small>
+                </div>
+            </form>
+       </div>
+        
         
         <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
         <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>

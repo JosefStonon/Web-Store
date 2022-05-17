@@ -42,7 +42,7 @@ $(document).ready(function(){
 
      /*
       * Manipulação de eventos
-      */
+      
      $('.featured-item a').on('blur', function(event){
 
         event.preventDefault();
@@ -50,6 +50,7 @@ $(document).ready(function(){
         alert('Produto esgotado');
 
      })
+    
 
      $('.featured-item:nth(1)')
          .hide(2000, function(){
@@ -58,6 +59,18 @@ $(document).ready(function(){
          .show(2000, function(){
       console.log( $(this).find('h4').text() + ' em estoque')
    })
+    */
+
+   $('.nav-modal-open').on('click', function(e){
+      e.preventDefault();
+
+      let elem = $(this).attr('rel')
+
+      $('.modal-body').html($('#'+elem).html())
+
+      let myModal = new bootstrap.Modal($('modelId'))
+       mymodal.show()
+   }); 
      
      
      
