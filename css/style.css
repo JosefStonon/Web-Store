@@ -744,6 +744,7 @@ a {
 
 .form {
 	background-color: #9dafff;
+	display: block;
 	padding: 3rem;
 }
 
@@ -752,8 +753,8 @@ a {
 }
 
 .mb-3 {
-	display: inline-flex;
-	width: 100%;
+
+	max-width: 100%;
 	justify-content: center;
 	align-items: center;
 }
@@ -763,5 +764,13 @@ a {
 }
 
 #e-mail {
-	max-width: 50%;
+	max-width: 90%;
+}
+
+.invalid {
+	border-color: #f00;
+}
+
+.text-muted {
+	display: none;
 }

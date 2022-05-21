@@ -67,13 +67,106 @@ $(document).ready(function(){
       let elem = $(this).attr('rel')
 
       $('.modal-body').html($('#'+elem).html())
+      $('.modal-header h5.modal-title').html($(this).text())
 
-      let myModal = new bootstrap.Modal($('modelId'))
-       mymodal.show()
-   }); 
+
+      let myModal = new bootstrap.Modal($('#modelId'))
+
+       myModal.show()
+   })
+
+   function validade( elem ){
+      if(elem.val()== '') {
+
+         console.log('o campo de  '+ elem.attr('name') + ' é obrigatório')
+
+         elem.parent().find('.text-muted').show()
+
+         elem.addClass('invalid')
+
+         return false
+      } else {
+         elem.parent().find('.text-muted').hide()
+         elem.removeClass('invalid')
+      }
+   }
+
+
+   $('body').on('submit', '.modal-body .form', function(e){
+
+      e.preventDefault()
+
+      const inputname = $('#nome')
+      const inputemail = $('#email')
+
+      validade(inputname)
+      validade(inputemail)
+
+      if(inputname.hasClass('invalid') || inputemail.hasClass('invalid')){
+         console.log('verificar campos obrigatórios')
+         return false
+         
+      } else {
+         $(this).submit()
+      }
+
+   })
+
+      
+
+ 
+
+     $('body').on('blur', '#nome', function(){
+      validade($(this))
+     
+      })
+
+      $('body').on('blur', '#email', function(){
+         validade($(this))
+       
+     })
+
+
+     $('body').on('blur', '#date', function(){
+      validade($(this))
+      $('#date').mask('00/00/0000');
+    
+  })
+
+      $('body').on('blur', '#time', function(){
+         validade($(this))
+         $('#time').mask('00:00');
+      
+      })
+
+      $('body').on('blur', '#cep', function(){
+         validade($(this))
+         $('#cep').mask('00000-000');
+      
+      })
+
+      $('body').on('blur', '#phone', function(){
+         validade($(this))
+         $('#phone').mask('00000-0000');
+      
+      })
+
+      $('body').on('blur', '#cpf', function(){
+         validade($(this))
+         $('#cpf').mask('000.000.000-00');
+      
+      })
+     
+
      
      
      
+   
+   })
+
+     
+     
+       
      
 
 
@@ -82,4 +175,4 @@ $(document).ready(function(){
 
 
 
-})
+

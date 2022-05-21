@@ -224,32 +224,88 @@
                     <div class="modal-body">
                     
                     </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save</button>
-                    </div>
+        
+
                 </div>
             </div>
         </div>
-
+ 
        <div id="contato" class="visually-hidden">
 
-           <form action="" class="form">
+           <form action="post" class="form">
 
                 <div class="mb-3">
-                    <label for="nome" class="form-label"></label>
+                    <label for="nome" class="form-label">Nome</label>
                     <input type="text" name="nome" id="nome" class="form-control" placeholder="digite seu nome" aria-describedby="helpId">
                     <small id="helpnome" class="text-muted">
                         Digite um nome válido
                     </small>
                 </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail</label>
+                    <input type="text" name="email" id="email" class="form-control" placeholder="digite seu e-mail" aria-describedby="helpId">
+                    <small id="helpemail" class="text-muted">
+                        Digite um e-mail válido
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="date" class="form-label">Data</label>
+                    <input type="text" name="date" id="date" class="form-control" placeholder="digite a data" aria-describedby="helpId">
+                    <small id="helpdate" class="text-muted">
+                        Digite uma data válida
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="time" class="form-label">Tempo</label>
+                    <input type="text" name="time" id="time" class="form-control" placeholder="digite seu tempo" aria-describedby="helpId">
+                    <small id="helptime" class="text-muted">
+                        Digite um tempo válido
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="phone" class="form-label">Telefone</label>
+                    <input type="text" name="phone" id="phone" class="form-control" placeholder="digite seu telefone" aria-describedby="helpId">
+                    <small id="helpphone" class="text-muted">
+                        Digite um telefone válido
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cep" class="form-label">CEP</label>
+                    <input type="text" name="cep" id="cep" class="form-control" placeholder="digite seu CEP" aria-describedby="helpId">
+                    <small id="helpcep" class="text-muted">
+                        Digite um CEP válido
+                    </small>
+                </div>
+
+                <div class="mb-3">
+                    <label for="cpf" class="form-label">CPF</label>
+                    <input type="text" name="cpf" id="cpf" class="form-control" placeholder="digite seu CPF" aria-describedby="helpId">
+                    <small id="helpcpf" class="text-muted">
+                        Digite um CPF válido
+                    </small>
+                </div>
+
+                <button class="btn btn-primary">Enviar</button>
             </form>
+       </div>
+
+       <div id="sobre" class="visually-hidden">
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae enim tempora amet accusantium, ipsum quae! Et asperiores non quidem aut sint error ea reiciendis, beatae dolore repellat expedita hic numquam?</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reprehenderit hic temporibus sunt aliquid, odio nemo corporis enim, voluptatum quaerat, eligendi quam eius modi maiores laudantium a assumenda vel fuga consequatur?</p>
+
        </div>
         
         
         <script src="./vendor/jquery/jquery-3.6.0.min.js"></script>
         <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
         <script src="./vendor/owl/js/owl.js"></script>
+        <script src="./vendor/jquery-mask/jquery.mask.min.js"></script>
         <script src="./js/custom.js"></script>
     </body>
     </html>
